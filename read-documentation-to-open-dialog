@@ -1,0 +1,28 @@
+Step 1_____
+---------------------------------Add Click Function on Button In component.html----------------------
+<button class="btn btn-warning btn-md"  (click)="openDialog()">Open Doalog</button>
+
+
+Step 2_____
+---------------------------------Import my-popup component and MatDialog in component.ts----------------------
+import {MatDialog} from '@angular/material/dialog';
+import { MyPopupComponent } from '../my-popup/my-popup.component';
+
+ constructor(public dialog: MatDialog) { }
+ 
+ openDialog(): void {
+    let dialogRef = this.dialog.open(AssignMoreUsersComponent);
+  }
+  
+  
+Step 3_____
+---------------------------------Import my-popup component In module.ts----------------------
+import { MyPopupComponent } from './layout/my-popup/my-popup.component';
+
+
+ declarations: [
+    MyPopupComponent
+ ],
+ entryComponents: [
+    MyPopupComponent
+ ],
