@@ -1,0 +1,19 @@
+Step 1_____
+---------------------------------Keep Data and Close Function on Button In component.html----------------------
+<p>Keep All the data here to show on popup</p>
+
+<button type="button" class="btn btn-sm btn-danger" (click)="close()">Close Popup</button>
+
+
+Step 2_____
+---------------------------------in MyPopup-component.ts----------------------
+
+import { MatDialogRef} from '@angular/material';
+
+
+constructor(private dialogRef: MatDialogRef<MyPopupComponent>)
+
+
+close(): void {
+    this.dialogRef.close(true);
+  }
